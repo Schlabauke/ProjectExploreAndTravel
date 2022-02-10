@@ -38,7 +38,7 @@ const Footer = () => {
                     <p>Food And Drink</p>
                 </article>
             </section>
-            <section>
+            <section className='social'>
 
                 <p><FaTwitter /></p>
                 <p><FaFacebook /></p>

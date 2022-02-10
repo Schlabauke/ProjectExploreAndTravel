@@ -3,7 +3,7 @@ import Herosection from "../Components/Herosection";
 
 const Home = () => {
     return (
-        <section className='Home'>
+        <main className='Home'>
             <Herosection />
             <article className='HomeArticle'>
                 <div>
@@ -16,7 +16,7 @@ const Home = () => {
                     <button>Learn More</button>
                 </article>
             </article>
-        </section>
+        </main>
 
     );
 }

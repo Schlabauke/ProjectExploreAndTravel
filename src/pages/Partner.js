@@ -1,5 +1,6 @@
 import Herosection from "../Components/Herosection";
 import { FaStar } from 'react-icons/fa';
+import TrendingItems from '../Components/TrendingItems.js'
 const Partner = () => {
     return (
         <section className='Home'>
@@ -23,14 +24,7 @@ const Partner = () => {
             </section>
             <section>
                 <h2>Trending Stories</h2>
-                <article>
-                    <img src='' alt='' />
-                    <h3>The many benefits of
-                        taking a healing holiday</h3>
-                    <p>‘Helaing holidays’ are on the rise
-                        tohelp maximise your health and happines...</p>
-                    <p>Read More</p>
-                </article>
+                <TrendingItems />
             </section>
         </section>
     );

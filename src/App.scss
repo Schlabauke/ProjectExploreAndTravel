@@ -5,8 +5,12 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Playfair Display', serif;
 
 #FB8F1D,#1ABE84, #7D7987*/
+
 *{
-    font-family: 'Inter', sans-serif;  
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;  
 }
 h1{
   font-family: 'Playfair Display', serif;
@@ -16,9 +20,13 @@ h2{
     font-family: 'Playfair Display', serif;
   font-size: 40px;
 }
- a{
+
+a{
      text-decoration: none;
      font-size: 15px;
+     &:hover {
+      text-decoration: underline;
+    }
  }
 
  @mixin button {
@@ -26,10 +34,12 @@ h2{
     border-radius: 5px;
     border:1px solid #FB8F1D;
  }
+ .Home{
+  margin:5vh 5vw;
+}
 /* ####################### HEADER ########################### */
 header{
 nav{
-  font-family: 'Inter', sans-serif;
   font-size: 18px;
   margin: 1em;
   display: flex;
@@ -45,19 +55,26 @@ nav{
     li:nth-of-type(5){
       @include button;
       background: none;
+      &:hover {
+        background: #FB8F1D;
+        color: white; 
+        border-color: #FB8F1D;
+      }
     }
     li:last-of-type{
       @include button;
       background: #FB8F1D;
       color:whitesmoke;
+      &:hover {
+        background: white;
+        color: #FB8F1D; 
+      }
     }
     }
     }
   }
 
   /* ################### HERO SECTION ####################### */
-  .Home{
-    margin:5vh 5vw;
 .HeroSection{
     margin-bottom: 10vh;
   display: flex;
@@ -98,23 +115,25 @@ margin:0px;
         }
     }
     button {
-        margin-top: 2em;
+      margin-top: 2em;
      @include button;
-        background: #FB8F1D;
+      background: #FB8F1D;
       color:whitesmoke;
       font-size: 16px;
+      &:hover {
+        background: white;
+        color: #FB8F1D; 
+      }
      }
  }
  article:nth-of-type(2){
     margin-left: 4em;
  }
 }
-  }
+  
 
 /* ############ Home Section & About Section */
-.Home{
-    margin:0 5vw;
-    .HomeArticle{
+.HomeArticle{
         margin:20vh 0;
         display:flex;
         justify-content: space-between;
@@ -124,16 +143,21 @@ margin:0px;
             p{
                 color:#7D7987;
                 line-height: 25px;
+                margin:1em 0 2em 0;
             }
             button{
                 @include button;
                 background: #FB8F1D;
                 color: whitesmoke;
                 font-size: 16px;
+                &:hover {
+                  background: white;
+                  color: #FB8F1D; 
+                }
             }
         }
     }
-}
+
 /* ################### PARTNER ######################## */
 .partner{
     width: 75vw;
@@ -146,20 +170,20 @@ margin:0px;
         justify-self: center; 
         div{
             width:15vw;
-            display:flex;
-            justify-content: space-evenly;
+            margin-right: 1vw;           
         }
         p:nth-of-type(1){
+          margin-top: 1vh;
             width:35vw;
-            line-height: 20px;
+            line-height: 25px;
         }
         p:nth-of-type(2){
+          margin-top: 2vh;
             font-size:18px;
             font-weight: bold;
         }
         p:nth-of-type(3){
-            margin-top:-5px;
-            padding:0;
+          margin-top: 1vh;
             font-size:13px;
         }
     }
@@ -170,41 +194,97 @@ margin:0px;
       
   }
 }
+.partnerimages{
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px; 
+    article{
+      margin-top: 5vh;
+    div {
+      text-align: center;
+      width:15vw;
+    img{
+          height: 30vh;
+    }
+     }
+      h3{
+        margin:1vh 0;
+        font-family: 'Playfair Display', serif;
+        font-size: 20px;
+        width: 18vw;
+      }
+      p {
+        line-height: 20px;
+        font-size: 15px;
+        margin-bottom: 1vh;
+      }
+    }
+}
 
+/* ###################### Destination ################### */
+.destinationImages {
+  margin-top: 2em;
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px; 
+  div {
+    position: relative; 
+    width: 150px; 
+    img {
+      border-radius: 10px;
+    }
+    div {
+      position: absolute; 
+      bottom: -20px; 
+      background: white; 
+      padding: 5px; 
+      border-top-right-radius: 5px; 
+      }
+  }
+}
 /* ###################### FOOTER ##################### */
 footer{
-    margin-top: 5vh;
+    padding-top: 3em;
     background: #F9F9FB;
-    font-size: 12px;
+    font-size: 15px;
     section:nth-of-type(1){
+      margin-bottom: 5vh;
         display:grid;
         grid-template-columns: 2fr 1fr 1fr 1fr;
         gap: 0.5em;
         article:nth-of-type(1){
-            padding:1em;
-            margin-left: 4vw;
-            align-self: center;
-            justify-self: center;
+          padding:1em;
+          margin-left: 4vw;
+          align-self: center;
+          justify-self: center;
+              div{
+              margin-bottom: 2em;
+              }
+              p{
+                width: 30vw;
+              }
         }
+      }
         p{
             color:#7D7987;
+            line-height: 25px;
         }
         h2{
             font-size: 20px;
+            margin-bottom: 2vh;
         }
     }
-    section:nth-of-type(2){
+    .social{
         border-top: 1px solid #7D7987;
         width: 90%;
-        margin: 5vh auto;
-           display:flex;
-           justify-content: center;
-           p{
-               margin:1em 0.4em;
-           }
+        margin: 1vh auto;
+        display:flex;
+        justify-content: center;
+        p{
+          margin:1em 0.4em;
+        }
     }
-    
-}
+
 
 
 

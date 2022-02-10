@@ -2,7 +2,7 @@ import Herosection from "../Components/Herosection";
 
 const About = () => {
     return (
-        <section className='Home'>
+        <main className='Home'>
             <Herosection />
             <article className='HomeArticle'>
                 <article>
@@ -14,7 +14,7 @@ const About = () => {
                     <img src='../images/walking.png' alt='woman with baloon' />
                 </div>
             </article>
-        </section>
+        </main>
     );
 }
 
